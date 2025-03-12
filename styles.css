@@ -1,0 +1,69 @@
+/*
+File: styles.css
+GUI II Assignment: Final Act Group Project
+Idil Hassan & Christian Dodge & Saeed Gudal & Shakib Tidjani
+
+This file is for stylizing the text for the entire project.
+
+Changelog:
+03/12/2025: Created by CD.
+03/12/2025: Added very basic implementation (no dynamic functionality, little formatting).
+
+Image Source(s):
+• Figma template for the background image.
+*/
+
+body {
+/* This is for the background image. */
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+/* This is for the background image. */
+
+
+/* This formats text alignment. */
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* This formats text alignment. */
+
+
+/* This styles the table. */
+  th:nth-child(1), td:nth-child(1) {
+    color: black;
+    background: lightgray;
+}
+
+  th:nth-child(2), td:nth-child(2) {
+    color: black;
+    background: lightgray;
+}
+
+  th:nth-child(3), td:nth-child(3) {
+    color: black;
+    background: lightgray;
+}
+
+  th:nth-child(4), td:nth-child(4) {
+    color: black;
+    background: lightgray;
+}
+
+th:nth-child(5), td:nth-child(5) {
+  color: black;
+  background: lightgray;
+}
+
+th:nth-child(6), td:nth-child(6) {
+  color: black;
+  background: lightgray;
+}
+/* This styles the table. */
+}
