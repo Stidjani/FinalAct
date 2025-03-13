@@ -8,6 +8,8 @@ This HTML file is the home page for Final Act, which allows the user to filter m
 Changelog:
 03/12/2025: Created by CD.
 03/12/2025: Added very basic implementation (no dynamic functionality, little formatting).
+3/13/2025: made it look almost like the protoype 
+
 
 Image Source(s):
 N/A.
@@ -20,62 +22,47 @@ N/A.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-
-<!-- CSS linking. -->
-<link rel="stylesheet" href="css/styles.css">
-<!-- CSS linking. -->
-
-<!-- Tab title. -->
-<title>Final Act Home Page</title>
-<!-- Tab title. -->
-
-</head>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Act - Your Perfect Ending to Movie Night</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 <body>
-<!-- Table. -->
-<table style="width:100%">
-  <tr>
-    <td><h2><strong><a href="index.html">Last Act</a><br></h2><h4>YOUR PERFECT ENDING TO MOVIE NIGHT</h4></strong></td>
-
-    <td><h2><strong><a href="index.html">Home</a></strong></h2></td>
-
-    <td><h2><strong><a href="watched.html">Watched</a></strong></h2></td>
-
-    <td><h2><strong><a href="savedforlater.html">Saved for Later</a></strong></h2></td>
-
-    <td><h2><strong><a href="login.html">Login/Signup</a></strong></h2></td>
-  </tr>
-</table>
-<h1 style="text-align: center; color: white;">PICK A MOOD:</h1>
-<p style="text-align: center; color: white;">Choose how you're feeling, and we'll find the perfect movie for your night.</p>
-<table>
-  <tr>
-    <td><strong><h3><a href="movies.html">Happy</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Sad</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Thrilling</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Dramatic</a></h3></strong></td>
-  </tr>
-  <tr>
-    <td><strong><h3><a href="movies.html">Adventurous</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Brave</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Nostalgic</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Spooky</a></h3></strong></td>
-  </tr>
-  <tr>
-    <td><strong><h3><a href="movies.html">Silly</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Romantic</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Hyped</a></h3></strong></td>
-    <td><strong><h3><a href="movies.html">Chill</a></h3></strong></td>
-  </tr>
-</table>
-<!-- Table. -->
-
-
-<!-- Paragraph. -->
-<p style="background-color:LightGray;"><strong>Want to filter movies by more than one mood? Click <a href="index.html">here</a></h3>!</strong>
-<!-- Paragraph. -->
-
-</body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo">FINAL ACT</div>
+                <div class="tagline">YOUR PERFECT ENDING TO MOVIE NIGHT</div>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-button">HOME</a>
+            <a href="watched.html" class="nav-button">WATCHED</a>
+            <a href="savedforlater.html" class="nav-button">SAVED FOR LATER</a>
+            <a href="login.html" class="nav-button">LOGIN/SIGNUP</a>
+        </nav>
+    </header>
+    
+    <div class="main-content">
+        <h1 class="title">PICK A MOOD:</h1>
+        <p class="subtitle">CHOOSE HOW YOU'RE FEELING, AND WE'LL FIND THE PERFECT MOVIE FOR YOUR NIGHT.</p>
+        
+        <div class="mood-grid">
+            <button class="mood-button happy">HAPPY</button>
+            <button class="mood-button sad">SAD</button>
+            <button class="mood-button thrilling">THRILLING</button>
+            <button class="mood-button dramatic">DRAMATIC</button>
+            <button class="mood-button adventurous">ADVENTUROUS</button>
+            <button class="mood-button brave">BRAVE</button>
+            <button class="mood-button nostalgic">NOSTALGIC</button>
+            <button class="mood-button spooky">SPOOKY</button>
+            <button class="mood-button silly">SILLY</button>
+            <button class="mood-button romantic">ROMANTIC</button>
+            <button class="mood-button hyped">HYPED</button>
+            <button class="mood-button chill">CHILL</button>
+        </div>
+    </div>
+    
+    <button id="group-prompt" class="mood-button chill">IN A GROUP?</button>
+  </body>
 </html>
