@@ -6,9 +6,10 @@ Idil Hassan & Christian Dodge & Saeed Gudal & Shakib Tidjani
 This file is for stylizing the text for the entire project.
 
 Changelog:
-03/12/2025: Created by CD.
-03/12/2025: Added very basic implementation (no dynamic functionality, little formatting).
-3/13/2025: made it look almost like the protoype 
+03/12/2025: CD: Created file.
+03/12/2025: CD: Added very basic implementation (no dynamic functionality, little formatting).
+03/13/2025: IH: Made it look almost like the protoype 
+03/18/2025: CD: Added some parts for watched.html and savedforlater.html formatting/styling.
 
 Image Source(s):
 • Figma template for the background image.
@@ -250,4 +251,95 @@ nav {
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
+}
+
+
+.prev-movies-grid { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three tables per row. */
+  gap: 30px; 
+  justify-content: center;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.movie-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.movie-card img {
+  width: 50%;  /* Ensures the image takes full width of its container */
+  height: 250px; /* Fixed height for consistency */
+  object-fit: fill; /* Crops the image to fill the fixed size while maintaining aspect ratio */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+.movie-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: black;
+}
+
+.saved-movies-grid { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three tables per row. */
+  gap: 30px; 
+  justify-content: center;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.saved-movie-card {
+  display: flex;         /* Side-by-side layout */
+  align-items: center;   /* Align items vertically */
+  background-color: white;      /* Dark background for contrast */
+  color: black;
+  border-radius: 10px;   /* Rounded corners */
+  padding: 20px;
+  width: 500px;          /* Adjust size as needed */
+  gap: 15px;            /* Space between image and text */
+}
+
+.details {
+  color: black;
+}
+
+.description {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically (if needed) */
+  text-align: center; /* Ensures text stays centered */
+  color:black;
+}
+
+.scroll-box {
+  max-height: 100px;
+  max-width: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 8px;
+  color: black;
+  background-color: white;
+  text-align: left; /* Keeps text alignment inside the box */
+}
+
+.action-button {
+  background-color: #6a2fec;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #5420d1;
 }
