@@ -6,9 +6,9 @@ Idil Hassan & Christian Dodge & Saeed Gudal & Shakib Tidjani
 This HTML file is for recording movies that the user has marked as Save for Later.
 
 Changelog:
-03/12/2025: Created by CD.
-03/12/2025: Added very basic implementation (no dynamic functionality, little formatting).
-3/13/2025: made it look almost like the protoype 
+03/12/2025: CD: Created file.
+03/12/2025: CD: Added very basic implementation (no dynamic functionality, little formatting).
+03/18/2025: CD: Added formatting to be very close to the prototype, with minor alternations.
 
 
 Image Source(s):
@@ -52,36 +52,83 @@ N/A.
   </nav>
 </header>
 <h1 style="text-align: center; color: white;">SAVED FOR LATER</h1>
-<table>
-  <tr>
-    <td><strong><h3>Movie Poster</h3><br></strong></td>
-    <td><strong><h3>Movie Title</h3></strong></td>
-    <td><strong><h3>Movie Description</h3></strong></td>
-    <td><strong><h3>Movie Duration</h3></strong></td>
-    <td><strong><h3>Movie Rating</h3></strong></td>
-    <td><strong><h3>Actions</h3></strong></td>
-  </tr>
-  <tr>
-    <td><img src="image link" alt="Movie Poster" width="100" height="50"></td>
-    <td>
-        <div style="max-height: 100px; max-width: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 8px;">
-            Super super super super super long movie title. It is very very very very very very very very very very very very very very very very very very very very very very long.
-        </div>
-    </td>
-    <td>
-        <div style="max-height: 100px; max-width: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 8px;">
-            Super super super super super long movie description. It is very very very very very very very very very very very very very very very very very very very very very very long.
-        </div>
-    </td>
-    <td>Movie Duration</td>
-    <td>Movie Rating</td>
-    <td>
-        <button type="submit">Remove from Saved for Later</button>
-    </td>
-  </tr>
-</table>
+<div class="prev-movies-grid">
+  <div class="movie-card">
+    <img src="TestImg.png" alt="Movie Poster" class="poster">
+    <div class="movie-info">
+      <p class="description">
+        <div class="scroll-box">
+          After a horrific alchemy experiment goes wrong in the Elric household, brothers Edward and Alphonse are left in a catastrophic new reality. Ignoring the alchemical principle banning human transmutation, the boys attempted to bring their recently deceased mother back to life. Instead, they suffered brutal personal loss: Alphonse's body disintegrated while Edward lost a leg and then sacrificed an arm to keep Alphonse's soul in the physical realm by binding it to a hulking suit of armor. The brothers are rescued by their neighbor Pinako Rockbell and her granddaughter Winry. Known as a bio-mechanical engineering prodigy, Winry creates prosthetic limbs for Edward by utilizing "automail," a tough, versatile metal used in robots and combat armor. After years of training, the Elric brothers set off on a quest to restore their bodies by locating the Philosopher's Stone—a powerful gem that allows an alchemist to defy the traditional laws of Equivalent Exchange. As Edward becomes an infamous alchemist and gains the nickname "Fullmetal," the boys' journey embroils them in a growing conspiracy that threatens the fate of the world.
+      </div>
+      </p>
+      <h3 class="title">Fullmetal Alchemist: Brotherhood</h3>
+      <p class="details">
+        <strong>RATING:</strong> R-17+ <br>
+        <strong>VIOLENCE & MILD LANGUAGE</strong> <br>
+        <strong>2009 – 25H 43M</strong>
+      </p>
+      <br>
+      <button class="action-button">Remove from Saved for Later</button>
+    </div>
+  </div>
 
-<!-- Table. -->
+  <div class="movie-card">
+    <img src="TestImg2.png" alt="Movie Poster" class="poster">
+    <div class="movie-info">
+      <p class="description">
+        <div class="scroll-box">
+          Hunters devote themselves to accomplishing hazardous tasks, all from traversing the world's uncharted territories to locating rare items and monsters. Before becoming a Hunter, one must pass the Hunter Examination—a high-risk selection process in which most applicants end up handicapped or worse, deceased. Ambitious participants who challenge the notorious exam carry their own reason. What drives 12-year-old Gon Freecss is finding Ging, his father and a Hunter himself. Believing that he will meet his father by becoming a Hunter, Gon takes the first step to walk the same path. During the Hunter Examination, Gon befriends the medical student Leorio Paladiknight, the vindictive Kurapika, and ex-assassin Killua Zoldyck. While their motives vastly differ from each other, they band together for a common goal and begin to venture into a perilous world.
+      </div>
+      </p>
+      <h3 class="title">Hunter x Hunter</h3>
+      <p class="details">
+        <strong>RATING:</strong> PG-13 <br>
+        <strong>VIOLENCE & MILD LANGUAGE</strong> <br>
+        <strong>2011 – 56H 47M</strong>
+      </p>
+      <br>
+      <button class="action-button">Remove from Saved for Later</button>
+    </div>
+  </div>
+
+  <div class="movie-card">
+    <img src="TestImg3.png" alt="Movie Poster" class="poster">
+    <div class="movie-info">
+      <p class="description">
+        <div class="scroll-box">
+          Young Ciel Phantomhive is known as "the Queen's Guard Dog," taking care of the many unsettling events that occur in Victorian England for Her Majesty. Aided by Sebastian Michaelis, his loyal butler with seemingly inhuman abilities, Ciel uses whatever means necessary to get the job done. But is there more to this black-clad butler than meets the eye? In Ciel's past lies a secret tragedy that enveloped him in perennial darkness—during one of his bleakest moments, he formed a contract with Sebastian, a demon, bargaining his soul in exchange for vengeance upon those who wronged him. Today, not only is Sebastian one hell of a butler, but he is also the perfect servant to carry out his master's orders—all the while anticipating the delicious meal he will eventually make of Ciel's soul. As the two work to unravel the mystery behind Ciel's chain of misfortunes, a bond forms between them that neither heaven nor hell can tear apart.
+      </div>
+      </p>
+      <h3 class="title">Black Butler</h3>
+      <p class="details">
+        <strong>RATING:</strong> R-17+ <br>
+        <strong>VIOLENCE & MILD LANGUAGE</strong> <br>
+        <strong>2008 – 9H 54M</strong>
+      </p>
+      <br>
+      <button class="action-button">Remove from Saved for Later</button>
+    </div>
+  </div>
+
+  <div class="movie-card">
+    <img src="TestImg4.png" alt="Movie Poster" class="poster">
+    <div class="movie-info">
+      <p class="description">
+        <div class="scroll-box">
+          Thirty-seven-year-old Satoru Mikami is a typical corporate worker, who is perfectly content with his monotonous lifestyle in Tokyo, other than failing to nail down a girlfriend even once throughout his life. In the midst of a casual encounter with his colleague, he falls victim to a random assailant on the streets and is stabbed. However, while succumbing to his injuries, a peculiar voice echoes in his mind, and recites a bunch of commands which the dying man cannot make sense of. When Satoru regains consciousness, he discovers that he has reincarnated as a goop of slime in an unfamiliar realm. In doing so, he acquires newfound skills—notably, the power to devour anything and mimic its appearance and abilities. He then stumbles upon the sealed Catastrophe-level monster "Storm Dragon" Veldora who had been sealed away for the past 300 years for devastating a town to ashes. Sympathetic to his predicament, Satoru befriends him, promising to assist in destroying the seal. In return, Veldora bestows upon him the name Rimuru Tempest to grant him divine protection. Now, liberated from the mundanities of his past life, Rimuru embarks on a fresh journey with a distinct goal in mind. As he grows accustomed to his new physique, his gooey antics ripple throughout the world, gradually altering his fate.
+      </div>
+      </p>
+      <h3 class="title">That Time I Got Reincarnated as a Slime</h3>
+      <p class="details">
+        <strong>RATING:</strong> PG-13 <br>
+        <strong>VIOLENCE & MILD LANGUAGE</strong> <br>
+        <strong>2018 – 9H 30M</strong>
+      </p>
+      <br>
+      <button class="action-button">Remove from Saved for Later</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
