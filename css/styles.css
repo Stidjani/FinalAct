@@ -34,8 +34,6 @@ body {
 
   /* background-image, copied from FIGMA prototype */
   position: relative;
-  width: 1440px;
-  height: 1024px;
 
   /* Dark Angular Gradient */
   background: conic-gradient(from 12.78deg at 28.99% 107.28%, #191817 -17.51deg, #6100C2 175.51deg, #191817 342.49deg, #6100C2 535.51deg);
