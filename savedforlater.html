@@ -9,6 +9,7 @@ Changelog:
 03/12/2025: CD: Created file.
 03/12/2025: CD: Added very basic implementation (no dynamic functionality, little formatting).
 03/18/2025: CD: Added formatting to be very close to the prototype, with minor alternations.
+03/22/2025: CD: Added the button to clear all, with popup.
 
 
 Image Source(s):
@@ -129,6 +130,17 @@ N/A.
     </div>
   </div>
 </div>
-
+<button id="group-prompt" class="mood-button chill">CLEAR ALL?</button>
+<div id="popup" class="popup-container">
+  <div class="popup-content">
+      <h2 class="popup-title">DELETE ALL?</h2>
+      
+      <p class="instructions">DO YOU WISH TO DELETE ALL MOVIES FROM SAVED FOR LATER? CLICK CONFIRM DELETION TO CONFIRM.</p>
+      <br>
+      <button class="action-button">Confirm Deletion</button>
+      
+  </div>
+</div>
 </body>
+<script src="js/popup.js"></script>
 </html>
