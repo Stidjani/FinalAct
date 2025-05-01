@@ -1,0 +1,66 @@
+<!--
+File: watched.html
+GUI II Assignment: Final Act Group Project
+Idil Hassan & Christian Dodge & Saeed Gudal & Shakib Tidjani
+
+This HTML file is for recording movies that the user has marked as Watched.
+
+Image Source(s):
+N/A.
+
+Other Source(s):
+N/A.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!-- CSS linking. -->
+<link rel="stylesheet" href="../css/style.css">
+<!-- CSS linking. -->
+
+<!-- Tab title. -->
+<title>Final Act Watched Movies</title>
+<!-- Tab title. -->
+
+</head>
+
+
+<body>
+<!-- Table. -->
+<header>
+  <div class="logo-container">
+      <a href="index.html" class="logo-link">
+          <div class="logo">FINAL ACT</div>
+          <div class="tagline">YOUR PERFECT ENDING TO MOVIE NIGHT</div>
+      </a>
+  </div>
+  <nav>
+      <a href="index.html" class="nav-button">HOME</a>
+      <a href="watched.html" class="nav-button">WATCHED</a>
+      <a href="savedforlater.html" class="nav-button">SAVED FOR LATER</a>
+      <a href="info.html" class="nav-button">ABOUT</a>
+  </nav>
+</header>
+<h1 style="text-align: center; color: white;">PREVIOUSLY WATCHED MOVIES</h1>
+
+<div class="watched-movies-grid"></div>
+
+<button id="group-prompt" class="mood-button chill">CLEAR ALL?</button>
+<div id="popup" class="popup-container">
+  <div class="popup-content">
+      <h2 class="popup-title">DELETE ALL?</h2>
+      
+      <p class="instructions">DO YOU WISH TO DELETE ALL MOVIES FROM <b> WATCHED? </b>CLICK CONFIRM DELETION TO CONFIRM.</p>
+      <br>
+      <button class="action-button">Confirm Deletion</button>
+      
+  </div>
+</body>
+<script src="js/popup.js"></script>
+<script src="js/removeMovie.js"></script>
+<script src=../js/watched.js></script>
+</html>

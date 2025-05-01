@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Multiple Moods</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo">FINAL ACT</div>
+                <div class="tagline">YOUR PERFECT ENDING TO MOVIE NIGHT</div>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-button">HOME</a>
+            <a href="watched.html" class="nav-button">WATCHED</a>
+            <a href="savedforlater.html" class="nav-button">SAVED FOR LATER</a>
+            <a href="info.html" class="nav-button">ABOUT</a>
+        </nav>
+    </header>
+
+  <div class="main-content">
+    <h1 class="title">SELECT MULTIPLE MOODS</h1>
+    <p class="subtitle">HOW MANY MOODS ARE YOU FEELING? SELECT THE AMOUNT OF MOODS, THEN CLICK TO CONFIRM AT THE BOTTOM</p>
+
+    <div class="mood-selection-header">
+        <div class="dropdown-container">
+          <select id="moodCountSelect">
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+
+    <div class="mood-grid">
+      <button class="mood-button happy" onclick="toggleMood('happy', this)">HAPPY</button>
+      <button class="mood-button sad" onclick="toggleMood('sad', this)">SAD</button>
+      <button class="mood-button thrilling" onclick="toggleMood('thrilling', this)">THRILLING</button>
+      <button class="mood-button dramatic" onclick="toggleMood('dramatic', this)">DRAMATIC</button>
+      <button class="mood-button adventurous" onclick="toggleMood('adventurous', this)">ADVENTUROUS</button>
+      <button class="mood-button brave" onclick="toggleMood('brave', this)">BRAVE</button>
+      <button class="mood-button nostalgic" onclick="toggleMood('nostalgic', this)">NOSTALGIC</button>
+      <button class="mood-button spooky" onclick="toggleMood('spooky', this)">SPOOKY</button>
+      <button class="mood-button silly" onclick="toggleMood('silly', this)">SILLY</button>
+      <button class="mood-button romantic" onclick="toggleMood('romantic', this)">ROMANTIC</button>
+      <button class="mood-button hyped" onclick="toggleMood('hyped', this)">HYPED</button>
+      <button class="mood-button chill" onclick="toggleMood('chill', this)">CHILL</button>
+    </div>
+
+    <button id="confirmMultiMood" style="display:none;" onclick="confirmMultiMood()">CONFIRM</button>
+
+
+    <script>
+
+let selectedMoods = [];
+
+function toggleMood(mood, buttonEl) {
+  const maxCount = parseInt(document.getElementById("moodCountSelect").value);
+
+  if (selectedMoods.includes(mood)) {
+    selectedMoods = selectedMoods.filter(m => m !== mood);
+    buttonEl.classList.remove("selected");
+  } else {
+    if (selectedMoods.length < maxCount) {
+      selectedMoods.push(mood);
+      buttonEl.classList.add("selected");
+    } 
+  }
+
+  const confirmBtn = document.getElementById("confirmMultiMood");
+  confirmBtn.style.display = selectedMoods.length === maxCount ? "block" : "none";
+}
+
+function confirmMultiMood() {
+    const selectedMoods = Array.from(document.querySelectorAll('.mood-button.selected'))
+        .map(button => button.textContent.toLowerCase());
+
+    if (selectedMoods.length === 0) {
+        alert("Please select at least one mood.");
+        return;
+    }
+
+    const moodParam = selectedMoods.join(',');
+    window.location.href = `groupMoodResults.html?mood=${encodeURIComponent(moodParam)}`;
+}
+
+
+
+    </script>
+  </div>
+</body>
+</html>

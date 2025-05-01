@@ -1,0 +1,596 @@
+/*
+Image Source(s):
+• Figma template for the background image.
+*/
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+
+  /* background-image, copied from FIGMA prototype */
+  position: relative;
+
+  /* Dark Angular Gradient */
+  background: conic-gradient(from 12.78deg at 28.99% 107.28%, #191817 -17.51deg, #6100C2 175.51deg, #191817 342.49deg, #6100C2 535.51deg);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+ 
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+
+}
+
+.nav-button {
+  background-color: #2a2550;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background-color: #3b3572;
+}
+
+/* Mood Page Styles */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+ /* Mood Grid Styles */
+ .mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 70px; /* Give space for floating button at bottom */
+}  
+
+.mood-button {
+  padding: 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;  /* Smooth animation */
+  text-align: center;
+  margin: 10px;
+}
+
+.mood-button:hover {
+  transform: translateY(-4px); /* Moves the button upward by 4 pixels when hovering */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mood Button Colors */
+.happy { background-color: #9257C9; }
+.sad { background-color: #8bb1c4; }
+.thrilling { background-color: #A82D8D; }
+.dramatic { background-color: #00827d; }
+.adventurous { background-color: #00780e; }
+.brave { background-color: #fff174; }
+.nostalgic { background-color: #a5e8ff; }
+.spooky { background-color: #ea6c6c; }
+.silly { background-color: #DDC139; }
+.romantic { background-color: #d292c7; }
+.hyped { background-color: #5ca5ff; }
+.chill { background-color: #ffffff; }
+
+#group-prompt {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color:#000000;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffffb5;
+  padding: 12px 20px; /* Reduced padding for mobile */
+  font-size: 16px; /* Smaller font for mobile */
+
+  
+} 
+
+#group-prompt:hover {
+  background-color: darkviolet;
+}
+
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 150px);
+}
+
+.login-form {
+  background-color: #D9D9D9;
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  color: #000;
+}
+
+.login-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-button {
+  background-color: #6a2fec;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.login-button:hover {
+  background-color: #5420d1;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.forgot-password {
+  margin-top: 10px;
+}
+
+.link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.prev-movies-grid { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three tables per row. */
+  gap: 30px; 
+  justify-content: center;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.movie-card {
+  background-color:  #D9D9D9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.movie-card img {
+  width: 50%;  /* Ensures the image takes full width of its container */
+  height: 250px; /* Fixed height for consistency */
+  object-fit: fill; /* Crops the image to fill the fixed size while maintaining aspect ratio */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+.movie-card h3 {
+  margin: 10px 0;
+  font-size: 30px;
+  color: black;
+}
+
+.saved-movies-grid { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three tables per row. */
+  gap: 30px; 
+  justify-content: center;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.saved-movie-card {
+  display: flex;         /* Side-by-side layout */
+  align-items: center;   /* Align items vertically */
+  background-color: white;      /* Dark background for contrast */
+  color: black;
+  border-radius: 10px;   /* Rounded corners */
+  padding: 20px;
+  width: 500px;         
+  gap: 15px;            /* Space between image and text */
+}
+
+.watched-movies-grid { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three tables per row. */
+  gap: 30px; 
+  justify-content: center;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.watched-movie-card {
+  display: flex;         /* Side-by-side layout */
+  align-items: center;   /* Align items vertically */
+  background-color: white;      /* Dark background for contrast */
+  color: black;
+  border-radius: 10px;   /* Rounded corners */
+  padding: 20px;
+  width: 500px;
+  gap: 15px;            /* Space between image and text */
+}
+
+.details {
+  color: black;
+}
+
+.description {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically (if needed) */
+  text-align: center; /* Ensures text stays centered */
+  color:black;
+}
+
+.scroll-box {
+  max-height: 100px;
+  max-width: 400px;
+  overflow-y: auto;
+  border: 4px solid #ccc;
+  padding: 8px;
+  color: black;
+  display: block;    /* Ensures it behaves like a block element */
+  margin: auto;      /* Centers it horizontally */
+  text-align: center; /* Centers text inside (optional) */
+}
+
+.action-button {
+  background-color: #6a2fec;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #5420d1;
+}
+
+
+/* pop up */
+.popup-container {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup box */
+.popup-content {
+  background: #f0f0f0;
+  padding: 30px;
+  border-radius: 5px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.dropdown-container {
+  position: relative;
+  width: 100%;
+  margin: 20px 0 30px;
+}
+
+.dropdown-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  appearance: none;
+  text-align: left;
+  position: relative;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid purple;
+  pointer-events: none;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+  color: #000;
+  text-align: left;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-container.open .dropdown-options {
+  display: block;
+}
+
+.instructions {
+  font-size: 17px;
+  color: black;
+  margin-top: 10px;
+}
+
+
+.mood-button.selected {
+  outline: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+
+.confirm-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: #555;
+}
+
+
+.mood-selection-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.dropdown-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dropdown-container select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.dropdown-container select:hover {
+  border-color: #888;
+}
+
+#confirmMultiMood {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color:#000000;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffffb5;
+  
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+/* Info Page Styling */
+
+.info-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.info-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.info-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 30px 0 15px;
+}
+
+.info-section {
+  margin-bottom: 25px;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Instructions Section */
+.instructions ol {
+  padding-left: 25px;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+}
+
+/* Note styling */
+.note {
+  margin: 15px 0;
+}
+
+/* FAQ Section */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+

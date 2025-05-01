@@ -1,0 +1,61 @@
+<!--
+File: savedforlater.html
+GUI II Assignment: Final Act Group Project
+Idil Hassan & Christian Dodge & Saeed Gudal & Shakib Tidjani
+
+This HTML file is for recording movies that the user has marked as Save for Later.
+
+Image Source(s):
+N/A.
+
+Other Source(s):
+N/A.
+
+
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Saved for Later</title>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <a href="index.html" class="logo-link">
+            <div class="logo">FINAL ACT</div>
+            <div class="tagline">YOUR PERFECT ENDING TO MOVIE NIGHT</div>
+        </a>
+    </div>
+    <nav>
+        <a href="index.html" class="nav-button">HOME</a>
+        <a href="watched.html" class="nav-button">WATCHED</a>
+        <a href="savedforlater.html" class="nav-button">SAVED FOR LATER</a>
+        <a href="info.html" class="nav-button">ABOUT</a>
+    </nav>
+</header>
+
+<h1 style="text-align: center; color: white;">SAVED FOR LATER</h1>
+
+<div class="saved-movies-grid">
+    <!-- saved movies will go here -->
+</div>
+<button id="group-prompt" class="mood-button chill">CLEAR ALL?</button>
+<div id="popup" class="popup-container">
+  <div class="popup-content">
+      <h2 class="popup-title">DELETE ALL?</h2>
+      
+      <p class="instructions">DO YOU WISH TO DELETE ALL MOVIES FROM <b> SAVED FOR LATER? </b>CLICK CONFIRM TO DO SO.</p>
+      <br>
+      <button class="action-button">Confirm Deletion</button>
+      
+  </div>
+</div>
+<script src="js/popup.js"></script>
+<script src="../js/savedforlater.js"></script>
+
+</body>
+</html>

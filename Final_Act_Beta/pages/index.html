@@ -1,0 +1,83 @@
+<!--
+File: index.html
+GUI II Assignment: Final Act Group Project
+Idil Hassan & Christian Dodge & Saeed Gudal & Shakib Tidjani
+
+This HTML file is the home page for Final Act, which allows the user to filter movies based on their mood.
+
+Changelog:
+03/12/2025: Created by CD.
+03/12/2025: Added very basic implementation (no dynamic functionality, little formatting).
+3/13/2025: made it look almost like the protoype
+
+Image Source(s):
+N/A.
+
+Other Source(s):
+N/A.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Act - Your Perfect Ending to Movie Night</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo">FINAL ACT</div>
+                <div class="tagline">YOUR PERFECT ENDING TO MOVIE NIGHT</div>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-button">HOME</a>
+            <a href="watched.html" class="nav-button">WATCHED</a>
+            <a href="savedforlater.html" class="nav-button">SAVED FOR LATER</a>
+            <a href="info.html" class="nav-button">ABOUT</a>
+        </nav>
+    </header>
+    
+    <div class="main-content">
+        <h1 class="title">PICK A MOOD:</h1>
+        <p class="subtitle">CHOOSE HOW YOU'RE FEELING, AND WE'LL FIND THE PERFECT MOVIE FOR YOUR NIGHT.</p>
+        
+        <div class="mood-grid">
+            <button class="mood-button happy" onclick="onMoodClick('happy')">HAPPY</button>
+            <button class="mood-button sad" onclick="onMoodClick('sad')">SAD</button>
+            <button class="mood-button thrilling" onclick="onMoodClick('thrilling')">THRILLING</button>
+            <button class="mood-button dramatic" onclick="onMoodClick('dramatic')">DRAMATIC</button>
+            <button class="mood-button adventurous" onclick="onMoodClick('adventurous')">ADVENTUROUS</button>
+            <button class="mood-button brave" onclick="onMoodClick('brave')">BRAVE</button>
+            <button class="mood-button nostalgic" onclick="onMoodClick('nostalgic')">NOSTALGIC</button>
+            <button class="mood-button spooky" onclick="onMoodClick('spooky')">SPOOKY</button>
+            <button class="mood-button silly" onclick="onMoodClick('silly')">SILLY</button>
+            <button class="mood-button romantic" onclick="onMoodClick('romantic')">ROMANTIC</button>
+            <button class="mood-button hyped" onclick="onMoodClick('hyped')">HYPED</button>
+            <button class="mood-button chill" onclick="onMoodClick('chill')">CHILL</button>
+            
+        </div>
+    </div>
+
+    <button id="group-prompt" class="mood-button" onclick="window.location.href='groupMoods.html'">MORE THAN ONE MOOD?</button>
+      
+    
+      </body>
+      <script src="../js/popup.js"></script>
+      <script src="../js/movies.js"></script>
+      <script src="../js/groupMoods.js"></script>
+
+
+      <script>
+        // Function to handle mood button clicks
+        function onMoodClick(mood) {
+            window.location.href = `movies.html?mood=${mood}`;
+        }
+    </script
+
+    
+    </html>
